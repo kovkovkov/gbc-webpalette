@@ -1,9 +1,22 @@
 <html>
 	<head>
 		<title>GBC WebPalette</title>
+		<script type="text/javascript">
+			function draw() {
+				var canvas = document.getElementById('A1');
+				if (canvas.getContext) {
+					var ctx = canvas.getContext('2d');
+					ctx.fillStyle = 'rgb(0, 0, 0)';
+					ctx.fillRect(0, 0, 160, 144);
+				}
+			}
+		</script>
 	</head>
-	<body>
+	<body onload="draw();">
 		<h1>Title</h1>
 		<p>Page</p>
+		<canvas id="A1" width="160" height="144">
+			<img src="non_available.png" />
+		</canvas>
 	</body>
 </html>
